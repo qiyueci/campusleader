@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+       font-family: "SimSun", "Microsoft YaHei", sans-serif;
+        a:visited {
+        color: #4A90E2;
+        }
+        }
+        body {
+            background-color: #F5F8FF;
+            color: #333333;
+            overflow-x: hidden;
+        }
+        /* 状态栏 */
+        .status-bar {
+            height: 30px;
+            background-color: #F5F8FF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+        .status-bar .time {
+            font-weight: 500;
+        }
+        .status-bar .icons {
+            display: flex;
+            gap: 5px;
+        }
+        /* 导航栏 */
+        .nav-bar {
+            height: 60px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-bar .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-bar .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-bar .logo span {
+            font-family: "SimSun", sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: #4A90E2;
+        }
+        .nav-bar .btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F0F7FF;
+            color: #4A90E2;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .nav-bar .btn:hover {
+            background-color: #E8F3FF;
+        }
+        /* 功能导航 */
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 0 15px 20px;
+        }
+        .function-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .function-card .icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .function-card:hover .icon-box {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .function-card .icon {
+            font-size: 32px;
+        }
+        .function-card .text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .function-card .school-box{
+            width: 300px;
+            height: 120px;
+            border-radius: 16px;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .function-card:hover .school-box {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .function-card .school {
+            font-size: 32px;
+        }
+        .function-card .name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        /* 轮播图 */
+        .carousel {
+            height: 350px;
+            margin: 15px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel .indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        .carousel .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #E0E0E0;
+        }
+        .carousel .indicator.active {
+            background-color: #4A90E2;
+        }
+        /* 功能图标颜色 */
+        .icon-nav { color: #4A90E2; }
+        .icon-study { color: #36CFC9; }
+        .icon-social { color: #FF7A45; }
+        .icon-psych { color: #9B59B6; }
+        .icon-library { color: #2ECC71; }
+        .icon-course { color: #F39C12; }
+        .icon-food { color: #E74C3C; }
+        .icon-dorm { color: #1ABC9C; }
+
+        /* 底部Tab栏 */
+        .tab-bar {
+            height: 60px;
+            background-color: #FFFFFF;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #999999;
+            cursor: pointer;
+        }
+        .tab-item.active {
+            color: #e2844a;
+        }
+        .tab-item .icon {
+            font-size: 22px;
+        }
+        .tab-item .text {
+            font-size: 18px;
+        }
+        /* 页脚 */
+        .footer {
+            position: fixed;
+            bottom: 72px;
+            left: 0;
+            width: 100%;
+        }
+
+        /* 引入图标库 */
+        @import url('https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css');
