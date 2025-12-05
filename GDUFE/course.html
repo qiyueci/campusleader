@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo_s.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>校园导航 - 校园心向导</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- 配置Tailwind自定义颜色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        accent: '#722ED1',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .shadow-card {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <button class="btn" onclick="window.history.back()">
+            <i class="fas fa-arrow-left">back</i>
+        </button>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo_h.png" alt="校园心向导">
+            </a>
+            <p style="font-size: 2rem;">×</p>
+            <a href="../index.html">
+                <img src="../images/GDUFE.svg" alt="广东财经大学">
+            </a>
+        </div>
+    </div>
+
+    <!-- 侧边导航栏 -->
+    <div class="side-nav">
+        <a href="position.html" class="side-nav-item active">
+            <i class="fas fa-map"></i>
+            <span>校园导航</span>
+        </a>
+        <a href="learning_resources.html" class="side-nav-item">
+            <i class="fas fa-book"></i>
+            <span>学习资源</span>
+        </a>
+        <a href="campus_social.html" class="side-nav-item">
+            <i class="fas fa-users"></i>
+            <span>校园社交</span>
+        </a>
+        <a href="psychological_counseling.html" class="side-nav-item">
+            <i class="fas fa-heart"></i>
+            <span>心理疏导</span>
+        </a>
+        <a href="library_guide.html" class="side-nav-item">
+            <i class="fas fa-book-open"></i>
+            <span>图书馆指南</span>
+        </a>
+        <a href="online_courses.html" class="side-nav-item">
+            <i class="fas fa-laptop"></i>
+            <span>课程查询</span>
+        </a>
+        <a href="canteen_food.html" class="side-nav-item">
+            <i class="fas fa-utensils"></i>
+            <span>食堂美食</span>
+        </a>
+        <a href="dormitory_life.html" class="side-nav-item">
+            <i class="fas fa-bed"></i>
+            <span>宿舍生活</span>
+        </a>
+    </div>
+    <!-- 页面主体 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 查询区域 -->
+        <section class="bg-white rounded-xl shadow-card p-6 mb-8 transform hover:scale-[1.01] transition-custom">
+            <h2 class="text-lg md:text-xl font-semibold mb-6 flex items-center">
+                <i class="fa fa-search text-primary mr-2"></i>课程查询
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 班级选择 -->
+                <div class="space-y-2">
+                    <label for="class-select" class="block text-sm font-medium text-gray-700">
+                        <i class="fa fa-users text-secondary mr-1"></i>选择班级
+                    </label>
+                    <select id="class-select"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom">
+                        <option value="">请选择班级</option>
+                        <option value="25ds1">25级数据科学与大数据技术1班</option>
+                        <option value="25ds2">25级数据科学与大数据技术2班</option>
+                        <option value="25cs1">25级计算机科学与技术1班</option>
+                        <option value="25cs2">25级计算机科学与技术2班</option>
+                        <option value="25se1">25级软件工程1班</option>
+                        <option value="25se2">25级软件工程2班</option>
+                        <option value="25ai1">25级人工智能1班</option>
+                        <option value="25ai2">25级人工智能2班</option>
+                    </select>
+                </div>
+
+                <!-- 星期选择 -->
+                <div class="space-y-2">
+                    <label for="weekday-select" class="block text-sm font-medium text-gray-700">
+                        <i class="fa fa-calendar text-secondary mr-1"></i>选择星期
+                    </label>
+                    <select id="weekday-select"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom">
+                        <option value="">请选择星期</option>
+                        <option value="1">星期一</option>
+                        <option value="2">星期二</option>
+                        <option value="3">星期三</option>
+                        <option value="4">星期四</option>
+                        <option value="5">星期五</option>
+                        <option value="6">星期六</option>
+                        <option value="0">星期日</option>
+                    </select>
+                </div>
+
+                <!-- 节次选择 -->
+                <div class="space-y-2">
+                    <label for="period-select" class="block text-sm font-medium text-gray-700">
+                        <i class="fa fa-clock-o text-secondary mr-1"></i>选择节次
+                    </label>
+                    <select id="period-select"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom">
+                        <option value="">请选择节次</option>
+                        <option value="1">第一二节 [01-02]</option>
+                        <option value="2">第三四节 [03-04]</option>
+                        <option value="3">第五六节 [05-06]</option>
+                        <option value="4">第七八节 [07-08]</option>
+                        <option value="5">第九十节 [09-10]</option>
+                        <option value="6">第十一十二节 [11-12]</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 查询按钮 -->
+            <div class="mt-8 text-center">
+                <button id="query-btn"
+                    class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-custom flex items-center justify-center mx-auto">
+                    <i class="fa fa-search mr-2"></i>查询课程
+                </button>
+                <button id="reset-btn"
+                    class="ml-4 px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-lg shadow-sm hover:shadow transition-custom flex items-center justify-center">
+                    <i class="fa fa-refresh mr-2"></i>重置
+                </button>
+            </div>
+        </section>
+
+        <!-- 结果显示区域 -->
+        <section id="result-section" class="bg-white rounded-xl shadow-card p-6 hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-lg md:text-xl font-semibold flex items-center">
+                    <i class="fa fa-table text-primary mr-2"></i>查询结果
+                </h2>
+                <div id="query-info" class="text-sm text-gray-500"></div>
+            </div>
+
+            <!-- 课程表结果 -->
+            <div class="overflow-x-auto">
+                <table id="result-table" class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                节次
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期一
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期二
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期三
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期四
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期五
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期六
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                星期日
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="result-body" class="bg-white divide-y divide-gray-200">
+                        <!-- 结果将通过JavaScript动态填充 -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- 详细课程信息卡片 -->
+            <div id="course-detail" class="mt-8 p-4 bg-blue-50 border-l-4 border-primary rounded-r-lg hidden">
+                <h3 class="text-lg font-semibold text-primary mb-2 flex items-center">
+                    <i class="fa fa-info-circle mr-2"></i>课程详情
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm"><span class="font-medium">课程名称：</span><span id="detail-course">--</span></p>
+                        <p class="text-sm mt-2"><span class="font-medium">授课教师：</span><span
+                                id="detail-teacher">--</span></p>
+                        <p class="text-sm mt-2"><span class="font-medium">上课周次：</span><span id="detail-weeks">--</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-sm"><span class="font-medium">上课地点：</span><span id="detail-location">--</span>
+                        </p>
+                        <p class="text-sm mt-2"><span class="font-medium">上课节次：</span><span id="detail-period">--</span>
+                        </p>
+                        <p class="text-sm mt-2"><span class="font-medium">上课星期：</span><span
+                                id="detail-weekday">--</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 无结果提示 -->
+        <section id="no-result-section" class="bg-white rounded-xl shadow-card p-8 text-center hidden">
+            <div class="flex flex-col items-center justify-center">
+                <i class="fa fa-search-minus text-gray-300 text-5xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-500 mb-2">未找到相关课程</h3>
+                <p class="text-gray-400 mb-6">请尝试调整查询条件或选择其他班级、星期、节次</p>
+                <button id="try-again-btn"
+                    class="px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-lg transition-custom">
+                    <i class="fa fa-refresh mr-1"></i>重新查询
+                </button>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="../course.js"></script>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
+    </div>
+
+    <!-- 底部Tab栏 -->
+    <div class="tab-bar">
+        <div class="tab-item">
+            <a href="../index.html" class="text">主页</a>
+        </div>
+        <div class="tab-item">
+            <a href="../school.html" class="text">学校</a>
+        </div>
+        <div class="tab-item">
+            <a href="../link_us.html" class="text">联系我们</a>
+        </div>
+        <div class="tab-item">
+            <a href="../thanks.html" class="text">鸣谢</a>
+        </div>
+    </div>
+</body>
+
+</html>
