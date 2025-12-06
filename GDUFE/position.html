@@ -8,44 +8,14 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>校园导航 - 校园心向导</title>
-    <style>
-        #toggle-content {
-            display: none;
-            margin-top: 10px;
-            padding: 15px;
-            background: #f5f5f5;
-        }
-
-        /* 新增内容区域样式 */
-        .category-content {
-            display: none;
-            background: white;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            margin: 10px 0 30px;
-        }
-
-        .category-content.active {
-            display: block;
-        }
-
-        .location-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .location-item:last-child {
-            border-bottom: none;
-        }
-    </style>
 </head>
 
 <body>
     <!-- 导航栏 -->
     <div class="nav-bar">
-        <button class="btn" onclick="window.history.back()">
-            <i class="fas fa-arrow-left">back</i>
+        <!-- 返回按钮 -->
+        <button class="btn" type="button" onclick="location.href='GDUFE.html'">
+            <i class="fas fa-arrow-left"></i> 返回
         </button>
         <div class="logo">
             <a href="GDUFE.html">
@@ -63,7 +33,7 @@
             <i class="fas fa-map"></i>
             <span>校园导航</span>
         </a>
-        <a href="learning_resources.html" class="side-nav-item">
+        <a href="source.html" class="side-nav-item">
             <i class="fas fa-book"></i>
             <span>学习资源</span>
         </a>
@@ -71,7 +41,7 @@
             <i class="fas fa-users"></i>
             <span>校园社交</span>
         </a>
-        <a href="psychological_counseling.html" class="side-nav-item">
+        <a href="heart.html" class="side-nav-item">
             <i class="fas fa-heart"></i>
             <span>心理疏导</span>
         </a>
@@ -94,12 +64,6 @@
     </div>
     <!-- 页面主体 -->
     <div class="container" style="padding: 20px 15px 80px;">
-        <!-- 搜索框 -->
-        <div class="search-box">
-            <input type="text" placeholder="搜索地点（如：图书馆、食堂）">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-
         <!-- 导航分类卡片 -->
         <h3 style="color: #4A90E2; margin: 30px 0 15px; font-size: 20px;">校园地点分类</h3>
         <div class="nav-cards">
@@ -139,6 +103,11 @@
                 <h3>服务设施</h3>
                 <p>超市、快递点、医务室等生活服务设施</p>
             </div>
+            <div class="nav-card" onclick="showCategory('bus-station')">
+                <i class="fas fa-bus"></i>
+                <h3>公交站</h3>
+                <p>校内及周边公交线路信息</p>
+            </div>
         </div>
 
         <!-- 校园地图 -->
@@ -148,79 +117,175 @@
         </div>
 
         <!-- 分类内容展示区域 -->
+        <!-- 教学楼信息 -->
         <div id="teaching-buildings" class="category-content">
             <h3>教学楼信息</h3>
             <div class="location-item">
-                <h4>主楼A栋</h4>
-                <p>位置：校园中心区域</p>
-                <p>主要用途：理论课程教学、大型讲座</p>
-                <p>开放时间：07:00-22:00</p>
+                <h4>厚德楼</h4>
+                <p>位置：云海东路</p>
+                <p>主要用途：课程教学、大型讲座</p>
             </div>
             <div class="location-item">
-                <h4>实验楼B栋</h4>
-                <p>位置：校园西侧</p>
-                <p>主要用途：计算机实验、专业实训</p>
-                <p>开放时间：08:00-21:00</p>
+                <h4>励学楼</h4>
+                <p>位置：云林北路</p>
+                <p>主要用途：课程教学、大型讲座</p>
+            </div>
+            <div class="location-item">
+                <h4>笃行楼</h4>
+                <p>位置：云林南路</p>
+                <p>主要用途：课程教学、大型讲座</p>
+            </div>
+            <div class="location-item">
+                <h4>拓新楼</h4>
+                <p>位置：图书馆北</p>
+                <p>主要用途：课程教学、实验室、多媒体教室</p>
+            </div>
+            <div class="location-item">
+                <h4>同心楼</h4>
+                <p>位置：环湖北路</p>
+                <p>主要用途：计算机专业实验室、多功能教室、课程教学、大型讲座</p>
             </div>
         </div>
-
+        <!-- 食堂信息 -->
         <div id="canteens" class="category-content">
             <h3>食堂信息</h3>
             <div class="location-item">
-                <h4>第一食堂</h4>
-                <p>位置：宿舍一区旁</p>
-                <p>特色：早餐丰富、价格实惠</p>
-                <p>营业时间：06:30-21:00</p>
+                <h4>第一食堂（怡膳园）</h4>
+                <p>位置：云山北路，杏园北，李园西</p>
+                <p>特色：--</p>
+                <p>营业时间：--</p>
             </div>
             <div class="location-item">
-                <h4>第二食堂</h4>
-                <p>位置：教学区附近</p>
-                <p>特色：各地风味小吃、自助餐</p>
-                <p>营业时间：06:30-22:00</p>
+                <h4>第二食堂（雅食园）</h4>
+                <p>位置：桃园西南，云林北路</p>
+                <p>特色：--</p>
+                <p>营业时间：--</p>
+            </div>
+            <div class="location-item">
+                <h4>第三食堂（清香园）</h4>
+                <p>位置：云山南路，竹园西南，紫园东南</p>
+                <p>特色：--</p>
+                <p>营业时间：--</p>
+            </div>
+            <div class="location-item">
+                <h4>第四食堂（师生综合服务中心）</h4>
+                <p>位置：云海西路，云林北路，杏园东南，桂园北</p>
+                <p>特色：--</p>
+                <p>营业时间：--</p>
             </div>
         </div>
-
+        <!-- 图书馆信息 -->
         <div id="library" class="category-content">
-            <h3>图书馆信息</h3>
+            <h3>佛山校区图书馆</h3>
+            <p>开放时间：8:00-23:00</p>
+            <p>注：寒暑假、法定公众假日具体服务时间请留意图书馆公告。</p>
             <div class="location-item">
-                <h4>主图书馆</h4>
-                <p>位置：校园东侧</p>
-                <p>馆藏：社会科学、自然科学类书籍</p>
-                <p>开放时间：08:00-22:00（周一至周日）</p>
+                <h4>一层</h4>
+                <p>A学术报告厅 Lecture Hall：申请使用；东南</p>
+                <p>B密集书库 Compact Stacks：收藏利用率较低的中文图书，可借阅，闭架管理；电梯下去</p>
+                <p>C贵宾室 VIP Reception；东南</p>
+                <p>D自修室 Study Room：提供自习，7:00-23:00；南北各2间</p>
+                <p>E咖啡吧 Café；南</p>
+                <p>F亲水平台 Waterfront Platform；西</p>
+                <p>G空调主控机房 A/C Control Room</p>
+                <p>H低压配电室 Power Supply Room</p>
+                <p>I校区监控室 Security</p>
+                <p>悦习坊：提供自习，8:00-23:00；东南</p>
+            </div>
+            <div class="location-item">
+                <h4>二层</h4>
+                <p>A总服务台 Service Counter：办理图书借还手续及咨询</p>
+                <p>B自助借还区 Self_service Check Out/Book Return</p>
+                <p>C新书阅览区 New Books</p>
+                <p>D藏本与工具书阅览区 Reserved & Reference Books</p>
+                <p>E咨询台 Information</p>
+                <p>F展览区 Exhibition</p>
+                <p>G办公室 Office Area：馆长室，办公室，会客室，会议室，图书委办公室，陈列室，消防监控室</p>
+                <p>教材循环利用区</p>
+                <p>税干阅览区：税干院捐赠图书借阅</p>
+            </div>
+            <div class="location-item">
+                <h4>三层</h4>
+                <p>A经济、管理、法律类图书阅览区 Economics, Management & Law：收藏经济、管理（C、F、D）类图书</p>
+                <p>B文学艺术类图书阅览区 Literature & Arts：收藏文学、艺术（I、J）类图书</p>
+                <p>C外文图书阅览区 Foreign Languages</p>
+                <p>D E期刊阅览区 Periodicals</p>
+                <p>F自助文印区 Self-service Copying</p>
+            </div>
+            <div class="location-item">
+                <h4>四层</h4>
+                <p>A社会科学类图书阅览区 Social Sciences：收藏自然科学（N、O、P、Q、R、S、T、U、V、X、Z）类图书</p>
+                <p>B自然科学类图书阅览区 Natu Sciences：收藏社科（A、B、E、G、H、K）类图书</p>
+                <p>C外文图书阅览区（落地书墙）Foreign Languages：收藏原版外文图书</p>
+                <p>D E报纸阅览区 Newspapers</p>
+                <p>G经典名著导读区</p>
+            </div>
+            <div class="location-item">
+                <h4>五层</h4>
+                <p>A电子阅览室 E-reading Room</p>
+                <p>B红棉厅 Hongmian Hall</p>
+                <p>C云海厅 Yunhai Hall</p>
+                <p>D紫荆厅 Zijing Hall</p>
+                <p>E教师研修室 Faculty Research： 老师使用，二楼服务台登记使用</p>
+                <p>F研讨室 Seminar：网上申请</p>
+                <p>G展览区 Exhibition：申请使用</p>
+                <p>H多功能视听与实训室 Multimedia AV & Training Room：申请使用</p>
+                <p>I多媒体资料室 Multimedia Collection</p>
+                <p>J数字图书馆技术应用研究室 Digital-library Research Room</p>
+                <p>K网络技术办公室Network Technology Dept.</p>
+                <p>L网络主控机房 Network Control Room</p>
+                <P>M设备室 Equipment Room</P>
+                <p>上岸吧</p>
+                <p>默识廊</p>
             </div>
         </div>
-
-        <!-- 其他分类内容省略，可按照相同格式添加 -->
+        <!-- 宿舍区信息 -->
         <div id="dormitories" class="category-content">
             <h3>宿舍区信息</h3>
-            <!-- 宿舍区具体内容 -->
+            <div class="location-item">
+                <h4>杏园</h4>
+                <p>楼栋：1栋，2栋，3栋</p>
+            </div>
+            <div class="location-item">
+                <h4>桂园</h4>
+                <p>楼栋：4栋，5栋，6栋</p>
+            </div>
+            <div class="location-item">
+                <h4>李园</h4>
+                <p>楼栋：7栋，8栋，13栋，14栋，15栋</p>
+            </div>
+            <div class="location-item">
+                <h4>桃园</h4>
+                <p>楼栋：9栋，10栋，11栋</p>
+            </div>
+            <div class="location-item">
+                <h4>紫园</h4>
+                <p>楼栋：16栋，17栋，18栋</p>
+            </div>
+            <div class="location-item">
+                <h4>竹园</h4>
+                <p>楼栋：19栋，20栋，21栋</p>
+            </div>
+            <div class="location-item">
+                <h4>有为书院</h4>
+                <p>楼栋：9栋，22栋</p>
+            </div>
         </div>
-
+        <!-- 运动场馆信息 -->
         <div id="sports-facilities" class="category-content">
             <h3>运动场馆信息</h3>
             <!-- 运动场馆具体内容 -->
         </div>
-
+        <!-- 服务设施信息 -->
         <div id="service-facilities" class="category-content">
             <h3>服务设施信息</h3>
-            <!-- 服务设施具体内容 -->
+            <!-- 具体内容 -->
         </div>
-        <!-- 热门地点推荐 -->
-        <h3 style="color: #4A90E2; margin: 30px 0 15px; font-size: 20px;">热门地点推荐</h3>
-        <div class="nav-cards">
-            <div class="nav-card">
-                <i class="fas fa-coffee"></i>
-                <h3>校园咖啡馆</h3>
-                <p>学习交流的好去处，提供咖啡和简餐</p>
-            </div>
-            <div class="nav-card">
-                <i class="fas fa-bus"></i>
-                <h3>公交站</h3>
-                <p>校内及周边公交线路信息</p>
-            </div>
+        <!-- 公交站信息 -->
+        <div id="bus-station" class="category-content">
+            <h3>公交站信息</h3>
         </div>
     </div>
-    <br><br><br><br>
     <!-- 页脚 -->
     <div class="footer">
         <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
@@ -241,6 +306,7 @@
             <a href="../thanks.html" class="text">鸣谢</a>
         </div>
     </div>
+
     <script>
         // 1. 获取元素
         const btns = document.querySelectorAll('.btn');

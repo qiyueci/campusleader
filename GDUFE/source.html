@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../images/logo_s.png">
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <title>校园心向导-广财大-校园导航</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>校园心向导-广财大-学习资源</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <!-- 导航栏 -->
     <div class="nav-bar">
+        <button class="btn" type="button" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i> 返回
+        </button>
         <div class="logo">
-            <a href="../index.html">
-                <img src="../images/logo_h.png" alt="校园心向导">
-            </a>
-            <p style="font-size: 2rem;">×</p>
             <a href="GDUFE.html">
                 <img src="../images/GDUFE.svg" alt="廣東財經大學">
             </a>
+            <a href="../index.html">
+                <img src="../images/logo_s.png" alt="校园心向导">
+            </a>
         </div>
         <!-- 返回按钮 -->
-        <a href="GDUFE.html">
-            <button class="button">返回上一页</button>
-        </a>
     </div>
 
+    <!-- 侧边导航栏 -->
+    <div class="side-nav">
+        <a href="position.html" class="side-nav-item">
+            <i class="fas fa-map"></i>
+            <span>校园导航</span>
+        </a>
+        <a href="source.html" class="side-nav-item active">
+            <i class="fas fa-book"></i>
+            <span>学习资源</span>
+        </a>
+        <a href="campus_social.html" class="side-nav-item">
+            <i class="fas fa-users"></i>
+            <span>校园社交</span>
+        </a>
+        <a href="heart.html" class="side-nav-item">
+            <i class="fas fa-heart"></i>
+            <span>心理疏导</span>
+        </a>
+        <a href="library_guide.html" class="side-nav-item">
+            <i class="fas fa-book-open"></i>
+            <span>图书馆指南</span>
+        </a>
+        <a href="course.html" class="side-nav-item">
+            <i class="fas fa-laptop"></i>
+            <span>课程查询</span>
+        </a>
+        <a href="canteen_food.html" class="side-nav-item">
+            <i class="fas fa-utensils"></i>
+            <span>食堂美食</span>
+        </a>
+        <a href="dormitory_life.html" class="side-nav-item">
+            <i class="fas fa-bed"></i>
+            <span>宿舍生活</span>
+        </a>
+    </div>
     <!-- 页脚 -->
     <div class="footer">
         <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
     </div>
-    
+
     <!-- 底部Tab栏 -->
     <div class="tab-bar">
         <div class="tab-item">
@@ -42,7 +79,7 @@
             <a href="../link_us.html" class="text">联系我们</a>
         </div>
         <div class="tab-item">
-            <a href="../thanks.html" class="text">鸣谢</a>            
+            <a href="../thanks.html" class="text">鸣谢</a>
         </div>
     </div>
 
