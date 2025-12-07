@@ -18,27 +18,6 @@ body {
     color: #333333;
     overflow-x: hidden;
 }
-
-/* 状态栏 */
-.status-bar {
-    height: 30px;
-    background-color: #F5F8FF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    font-size: 12px;
-}
-
-.status-bar .time {
-    font-weight: 500;
-}
-
-.status-bar .icons {
-    display: flex;
-    gap: 5px;
-}
-
 /* 导航栏 */
 .nav-bar {
     height: 60px;
@@ -397,14 +376,14 @@ body {
 .close-btn {
     /* 定位到右上角 */
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 14px;
+    right: 20px;
     /* 样式美化 */
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     color: #666;
     background-color: #f5f5f5;
     border-radius: 50%;
@@ -426,7 +405,7 @@ body {
 }
 
 /* 图片容器基础样式 - 电脑端默认并排 */
-.bus-images {
+.nav-images {
     display: flex;
     /* 启用Flex布局 */
     gap: 16px;
@@ -436,7 +415,7 @@ body {
 }
 
 /* 图片基础样式 */
-.bus-images img {
+.nav-images img {
     flex: 1;
     /* 两张图片平均分配容器宽度 */
     min-width: 0;
@@ -455,39 +434,52 @@ body {
 }
 
 /* 底部Tab栏 */
+/* 导航栏和底部样式优化 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
 .tab-bar {
-    height: 60px;
-    background-color: #FFFFFF;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
 }
 
 .tab-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    color: #999999;
-    cursor: pointer;
+    text-align: center;
 }
 
-.tab-item.active {
-    color: #e2844a;
+.tab-item a,
+.tab-item span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.tab-item .icon {
-    font-size: 22px;
+.tab-item.active span {
+    color: #4285f4;
+    font-weight: 500;
+    border-bottom: 2px solid #4285f4;
 }
 
-.tab-item .text {
-    font-size: 18px;
+.tab-item a:hover {
+    color: #4285f4;
 }
 
 /* 页脚 */
@@ -580,17 +572,6 @@ body {
 .room-item:hover {
     background-color: #f1f5f9;
 }
-
-/* 无编码的房间项（比如悦习坊） */
-.room-item.no-code {
-    grid-template-columns: 40px 1fr auto;
-}
-
-.room-item.no-code .room-name {
-    grid-column: 2 / 4;
-    /* 名称占后两列 */
-}
-
 /* 房间编码（A/B/C...） */
 .room-code {
     font-weight: 600;
@@ -620,22 +601,22 @@ body {
 /* 响应式调整 */
 @media (max-width: 768px) {
     .close-btn {
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 16px;
-        top: 8px;
-        right: 8px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 24px;
+        top: 12px;
+        right: 12px;
     }
 
-    .bus-images {
+    .nav-images {
         flex-direction: column;
         /* 改为竖排布局 */
         gap: 12px;
         /* 竖排时上下间距可稍小 */
     }
 
-    .bus-images img {
+    .nav-images img {
         width: 100%;
         /* 竖排时图片占满宽度 */
     }

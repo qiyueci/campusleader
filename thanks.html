@@ -7,6 +7,68 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>校园心向导 - 特别鸣谢</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .teams-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 90px;
+        }
+        
+        .team-card {
+            background-color: #FFFFFF;
+            border-radius: 16px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-title {
+            color: #4A90E2;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f7ff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .team-title i {
+            font-size: 1.5em;
+        }
+        
+        .team-members {
+            font-family: Fangsong;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #333;
+        }
+        
+        .page-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .page-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 
 <body style="background-color: aliceblue;">
@@ -21,17 +83,63 @@
     </div>
 
     <!-- 页面主体 -->
-    <div style="font-size: 1.5rem;font-family: 'Times New Roman', Times, serif;" align="center">
-        <br>
-        <h3>感谢以下人员：</h3><br>
-        <div class="text-box">
-            <span style="font-family: Fangsong;">
-                <b>信息组：</b>邝俊毅、张宇坤、梁俊杰、胡杰勋<br>
-                <b>图片组：</b>周钲宇、周之浩<br>
-                <b>开发组：</b>余嘉泳、余乐俊<br>
-                <b>反馈组：</b>付欲翔、李文顼、余幸梓</span>
+    <div class="page-header">
+        <h2>特别鸣谢</h2>
+        <p>感谢所有为项目付出努力的团队成员</p>
+    </div>
+    
+    <div class="teams-container">
+        <div class="team-card">
+            <div class="team-title">
+                <i class="fas fa-info-circle"></i>
+                <span>信息组</span>
+            </div>
+            <div class="team-members">
+                胡杰勋、梁俊杰、邝俊毅、张宇坤
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <div class="team-title">
+                <i class="fas fa-image"></i>
+                <span>图片组</span>
+            </div>
+            <div class="team-members">
+                周钲宇、周之浩
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <div class="team-title">
+                <i class="fas fa-code"></i>
+                <span>开发组</span>
+            </div>
+            <div class="team-members">
+                余乐俊、余嘉泳
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <div class="team-title">
+                <i class="fas fa-comments"></i>
+                <span>反馈组</span>
+            </div>
+            <div class="team-members">
+                李文顼、余幸梓
+            </div>
+        </div>
+
+        <div class="team-card">
+            <div class="team-title">
+                <i class="fas fa-experience"></i>
+                <span>体验组</span>
+            </div>
+            <div class="team-members">
+                陈乐阳、付欲翔、苏焱、王晓晴、杨嘉欣、余嘉才
+            </div>
         </div>
     </div>
+
     <!-- 页脚 -->
     <div class="footer">
         <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
@@ -39,7 +147,7 @@
 
     <!-- 底部Tab栏 -->
     <div class="tab-bar">
-        <div class="tab-item active">
+        <div class="tab-item">
             <a href="index.html" class="text">主页</a>
         </div>
         <div class="tab-item">

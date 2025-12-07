@@ -8,12 +8,80 @@
     <title>校园心向导-广财大-学习资源</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 学习资源页面专属样式 */
+        :root {
+            --source-primary: #36CFC9;
+            /* 学习资源主题色 */
+        }
+
+        /* 表格响应式适配 */
+        .responsive-table {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background-color: #f8fafc;
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9fafb;
+        }
+
+        /* 平台卡片样式 */
+        .platform-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .platform-desc {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .platform-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #e0f2fe;
+            color: #4A90E2;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 
 <body>
     <!-- 导航栏 -->
     <div class="nav-bar">
-        <button class="btn" type="button" onclick="window.history.back()">
+        <button class="btn" type="button" onclick="location.href='GDUFE.html'">
             <i class="fas fa-arrow-left"></i> 返回
         </button>
         <div class="logo">
@@ -24,7 +92,6 @@
                 <img src="../images/logo_s.png" alt="校园心向导">
             </a>
         </div>
-        <!-- 返回按钮 -->
     </div>
 
     <!-- 侧边导航栏 -->
@@ -62,6 +129,165 @@
             <span>宿舍生活</span>
         </a>
     </div>
+
+    <!-- 页面主体 -->
+    <div class="container" style="padding: 20px 15px 80px;margin-bottom: 70px;">
+        <!-- 网课平台指南模块 -->
+        <div class="nav-card" style="margin-bottom: 30px;">
+            <h3 style="color: var(--source-primary); font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-laptop-code"></i> 常用网课平台选择指南
+            </h3>
+
+
+            <!-- 平台分类速览表格 -->
+            <h4 style="margin: 20px 0 10px; color: #333; font-size: 16px;">平台分类速览</h4>
+            <div class="responsive-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类别</th>
+                            <th>代表平台</th>
+                            <th>核心优势</th>
+                            <th>适合人群</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>综合知识平台</td>
+                            <td>中国大学MOOC、网易公开课、B站、学堂在线</td>
+                            <td>内容广、系统化、免费资源多</td>
+                            <td>终身学习者、在校学生、兴趣探索者</td>
+                        </tr>
+                        <tr>
+                            <td>职业技能平台</td>
+                            <td>国家教育平台、慕课网</td>
+                            <td>实战性强、目标明确、与就业挂钩</td>
+                            <td>求职者、职场新人、转行人士</td>
+                        </tr>
+                        <tr>
+                            <td>专业精英平台</td>
+                            <td>Coursera、edX、Udacity</td>
+                            <td>证书含金量高、国际化、深度专业</td>
+                            <td>深度学习者、留学预备生、职场晋升者</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 详细平台介绍 -->
+        <h2 style="margin: 30px 0 15px; color: #333;">详细平台介绍</h2>
+
+        <!-- 综合类知识平台 -->
+        <h2 style="margin: 20px 0 10px; color: #4A90E2; ">1. 综合类知识平台（适合终身学习）</h2>
+        <div class="nav-cards" style="margin-top: 10px;">
+            <!-- 中国大学MOOC -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/mooc.png" alt="中国大学MOOC" style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">中国大学MOOC（慕课）</h3>
+                </div>
+                <p class="platform-desc">与国内顶尖高校合作，提供系统化的大学正牌课程，学习流程（作业、考试）完整，免费开放核心资源。</p>
+                <span class="platform-tag">适合：系统学习大学学科知识</span>
+            </div>
+
+            <!-- 网易公开课 -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/wygkk.png" alt="网易公开课" style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">网易公开课</h3>
+                </div>
+                <p class="platform-desc">引入大量TED、国际名校公开课，内容前沿多元，有助于开阔国际视野和接触前沿思想。</p>
+                <span class="platform-tag">适合：接触国际视野+前沿思想</span>
+            </div>
+
+            <!-- B站 -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/bilibili.png" alt="bilibili"
+                        style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">B站（bilibili）</h3>
+                </div>
+                <p class="platform-desc">强大的免费学习资源库，内容覆盖全领域，学习氛围浓厚，支持弹幕互动，教程实用性强。</p>
+                <span class="platform-tag">适合：所有人群</span>
+                <span class="platform-tag">特色：免费+互动性强</span>
+            </div>
+
+            <!-- 学堂在线 -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/xuetangx.jpg" alt="学堂在线" style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">学堂在线</h3>
+                </div>
+                <p class="platform-desc">由清华大学发起，汇聚清华、MIT、斯坦福等顶尖高校课程，科技类课程质量突出。</p>
+                <span class="platform-tag">适合：前沿科技+高端学术需求</span>
+            </div>
+        </div>
+
+        <!-- 职业技能类平台 -->
+        <h2 style="margin: 30px 0 10px; color: #FF7A45; ">2. 职业技能与实用技能类（提升竞争力）</h2>
+        <div class="nav-cards" style="margin-top: 10px;">
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/lifelong.svg" alt="国家终生教育平台"
+                        style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">国家终生教育平台</h3>
+                </div>
+                <p class="platform-desc">汇聚了338所知名高校课程资源，课程应有尽有，职场板块全面。/p>
+                    <span class="platform-tag">适合：职场新人、打工人、大学生</span>
+                    <span class="platform-tag">特色：考证必备</span>
+            </div>
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/zhiye.png" alt="国家职业教育智慧平台"
+                        style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">国家职业教育智慧平台</h3>
+                </div>
+                <p class="platform-desc">教育部联合多家职业院校创建，提供了各行各业的职业技能培训精品课程。</p>
+                    <span class="platform-tag">适合：职场新人、打工人、大学生</span>
+                    <span class="platform-tag">特色：职业导向</span>
+            </div>
+        </div>
+
+        <!-- 专业精英类平台 -->
+        <h2 style="margin: 30px 0 10px; color: #9B59B6;">3. 专业与精英提升类（深度系统化学习）</h2>
+        <div class="nav-cards" style="margin-top: 10px;">
+            <!-- Coursera -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/coursera.svg" alt="Coursera"
+                        style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">Coursera（国际平台）</h3>
+                </div>
+                <p class="platform-desc">与顶级大学和公司合作，提供专项课程和在线学位，证书含金量高，学习体系严谨。</p>
+                <span class="platform-tag">适合：系统化学习+高认可证书</span>
+            </div>
+
+            <!-- edX -->
+            <div class="nav-card platform-card">
+                <div class="platform-header">
+                    <img src="../images/edx.svg" alt="edX" style="width: 64px;height: 64px;border-radius: 6px;">
+                    <h3 style="margin: 0; font-size: 17px;">edX（国际平台）</h3>
+                </div>
+                <p class="platform-desc">由哈佛和MIT创立，课程学术性强，部分课程可兑换大学学分，适合深度学术提升。</p>
+                <span class="platform-tag">适合：留学计划+学术提升</span>
+            </div>
+        </div>
+
+        <!-- 选择建议与温馨提示 -->
+        <div class="nav-card" style="background-color: #f0f7ff; border-radius: 8px; padding: 15px; margin: 20px 0;">
+            <h5 style="margin: 0 0 10px; color: #4A90E2; font-size: 15px;">
+                <i class="fas fa-lightbulb"></i> 选择建议与温馨提示
+            </h5>
+            <ul style="padding-left: 20px; line-height: 1.8; color: #555;">
+                <li>明确学习目标：根据「平台分类速览」匹配自身需求，避免盲目选课。</li>
+                <li>充分利用试听：付费平台均提供免费试听，判断课程内容和老师风格是否适配。</li>
+                <li>关注学习成本：兼顾金钱成本（课程费用）和时间成本，制定可坚持的学习计划。</li>
+                <li>善用免费资源：B站、中国大学MOOC等平台的免费课程，足以满足入门和基础学习需求。</li>
+            </ul>
+        </div>
+
+    </div>
+
     <!-- 页脚 -->
     <div class="footer">
         <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
@@ -82,5 +308,6 @@
             <a href="../thanks.html" class="text">鸣谢</a>
         </div>
     </div>
-
 </body>
+
+</html>
