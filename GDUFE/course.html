@@ -12,7 +12,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入Font Awesome图标 -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     <!-- 配置Tailwind自定义颜色 -->
     <script>
         tailwind.config = {
@@ -33,20 +32,6 @@
         }
     </script>
 
-    <!-- 自定义工具类 -->
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .shadow-card {
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            }
-            .transition-custom {
-                transition: all 0.3s ease;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -101,7 +86,7 @@
         </a>
     </div>
     <!-- 页面主体 -->
-    <main class="container mx-auto px-4 py-8" style="margin-bottom: 50px;">
+    <div class="container mx-auto px-4 py-8" style="margin-bottom: 120px;">
         <!-- 查询区域 -->
         <section class="bg-white rounded-xl shadow-card p-6 mb-8 transform hover:scale-[1.01] transition-custom">
             <h2 class="text-lg md:text-xl font-semibold mb-6 flex items-center">
@@ -253,12 +238,122 @@
                 </button>
             </div>
         </section>
-    </main>
+
+        <div>
+            <h1 style="font-size: 1.5rem; margin: 20px 0 30px; color: #4A90E2; padding-left: 15px;">选课指南</h1>
+            <div class="nav-card" style="padding: 30px;">
+                <div class="location-item">
+                    <li style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">选课规则</li>
+                    <ul style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        每个学生都可以在教务系统查看自己的培养方案，系统在选课时通常只会出现培养方案中的课程，但学生不可以跨专业选课。</ul>
+                    <ul style="margin: 8px 0 8px 25px; line-height: 1.6;">选课分三个轮次进行：</ul>
+                    <ul style="margin: 8px 0 8px 45px; line-height: 1.6;">
+                        <li>第一、二轮：安排在课程修读前一学期的第14-16周</li>
+                        <li>第三轮：安排在课程修读学期的第1、2周</li>
+                        <li>新生第一学期：选课安排在第1-2周</li>
+                    </ul>
+                </div>
+
+                <div class="location-item">
+                    <li style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">选课途径</li>
+                    <ol style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li>在规定选课时间，通过手机、电脑等设备登录
+                            <a href="http://jwc.gdufe.edu.cn/" target="_blank">广东财经大学教务系统</a> 选课
+                        </li>
+                        <li>到机房管理员处登记后，在规定时间内按管理员安排使用机房电脑选课</li>
+                    </ol>
+                </div>
+
+                <div class="location-item">
+                    <li style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">轮次选课细则</li>
+                    <p style="margin: 8px 0; line-height: 1.6;">
+                        <strong>第一轮：</strong>每门课不限制填报人数，同一门课可填报三个志愿，可结合人才培养计划选择教学班，选课结束前可退选。若填报人数超过教学班容量，将通过抽签选取学生。
+                    </p>
+                    <p style="margin: 8px 0; line-height: 1.6;"><strong>后几轮：</strong>采用抢课制（比拼手速和网速）。</p>
+                </div>
+
+                <div class="location-item">
+                    <li style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">选课小贴士</li>
+                    <ul style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li>切忌退掉学校已安排的课程（如形势与政策等）</li>
+                        <li>填报志愿时注意冷热搭配：第一志愿＞第二志愿＞第三志愿，避免全选热门教学班，可将第三志愿作为保底</li>
+                        <li>志愿人数较多时，及时查看人数变化，在规定时间内退课另选，增加选课成功率</li>
+                        <li>尽量选择时间不冲突的教学班</li>
+                        <li>参照专业培养方案选课，建议修读的课程尽量选上；必修课/公共课（预置在课表的专业课）不要退选</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h1 style="font-size: 1.5rem; margin: 20px 0 30px; color: #4A90E2; padding-left: 15px;">转专业</h1>
+            <div class="nav-card" style="padding: 30px;">
+                <div class="location-item">
+                    <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">申请条件（满足其一即可）</h3>
+                    <ol style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li>第一学年累计平均学分绩点在同年级、同专业排名前40%</li>
+                        <li>确有拟转入专业的特长和兴趣，转专业更能发挥其专长</li>
+                        <li>有特定疾病/生理缺陷（不含隐瞒既往病史），经校门诊部证明不宜在原专业学习、但可在拟转入专业学习</li>
+                        <li>通过实验区遴选且需要转专业</li>
+                        <li>大学生士兵退役复学/入学</li>
+                    </ol>
+                </div>
+
+                <div class="location-item">
+                    <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">禁止转专业情形</h3>
+                    <ol style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li>招生时明确规定不能转专业的学生（含定向生、国防生等）</li>
+                        <li>提前批次录取且招生有特殊要求的学生</li>
+                        <li>已修满总学分三分之二及以上的学生</li>
+                        <li>休学、保留学籍等学籍状况异常的学生</li>
+                    </ol>
+                </div>
+
+                <div class="location-item">
+                    <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">录取规则</h3>
+                    <ul style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li>按「专业志愿优先」原则，根据学分绩点从高到低择优录取</li>
+                        <li>某专业第一志愿未录满则录取第二志愿，仍不足则录取第三志愿，未录满不调剂</li>
+                        <li>最后一名绩点相同（统计至小数点后六位）时，随机抽取录取</li>
+                    </ul>
+                </div>
+
+                <div class="location-item">
+                    <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 10px;">工作程序</h3>
+                    <ol style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                        <li><strong>公布资格名单：</strong>教务处初审后发至各学院复核，复核结果报教务处；教务处公示符合资格名单，各班需提交确认函（逾期视为无异议）</li>
+                        <li><strong>网上报名：</strong>登录<a href="http://jwxt.gdufe.edu.cn/jsxsd"
+                                target="_blank">教务管理信息系统</a>填报3个志愿（逾期不可修改），报名成功后截图留存凭证</li>
+                        <li><strong>公示志愿情况：</strong>教务处公示报名信息，信息不符可凭凭证核实（逾期不受理）</li>
+                        <li><strong>志愿遴选：</strong>教务处对学生志愿进行遴选</li>
+                        <li><strong>转出学院确认：</strong>学院审核拟转出名单并在系统完成审批，将结果返还教务处</li>
+                        <li><strong>转入学院审核：</strong>转入学院审核材料、确定接收名单，盖章后返还教务处，并在系统完成审批</li>
+                        <li><strong>审议与公示：</strong>校教学指导委员会审议，公示拟转入名单；无异议后发文公布并安排后续工作</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h1 style="font-size: 1.5rem; margin: 20px 0 30px; color: #4A90E2; padding-left: 15px;">辅修</h1>
+            <div class="nav-card" style="padding: 30px;">
+                <ol style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                    <li style="margin-bottom: 10px;">学校实行主辅修制，辅修指在校普教本科生跨学科门类修读主修专业外的另一专业</li>
+                    <li style="margin-bottom: 10px;">辅修以自愿为原则，符合条件者可在第二学期申请，经批准后从第三学期开始修读</li>
+                    <li style="margin-bottom: 10px;">辅修学生的学籍由主修专业所在学院管理</li>
+                    <li style="margin-bottom: 10px;">辅修选课与主修选课同时进行</li>
+                    <li style="margin-bottom: 10px;">取得辅修资格前修读的「跨学科、跨专业」模块课程，若与辅修培养方案课程一致且已获学分，可等效共用</li>
+                    <li>学分要求：
+                        <ul style="margin: 8px 0 8px 25px; line-height: 1.6;">
+                            <li>修满45学分且符合条件：授予辅修专业学士学位</li>
+                            <li>修满30学分且符合条件：颁发辅修专业证书</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="../course.js"></script>
 
     <!-- 页脚 -->
     <div class="footer">
-        <p align="center" style="font-family: 'Times New Roman', Times, serif;">© 2025 校园心向导 - 大学生的校园助手</p>
+        <p align="center" style="font-family: Fangsong;">© 校园心向导开发团队</p>
     </div>
 
     <!-- 底部Tab栏 -->
